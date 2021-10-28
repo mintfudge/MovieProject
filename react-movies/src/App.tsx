@@ -1,19 +1,24 @@
-import { movieDTO } from './Movies/movies.model';
+import IndexGenres from 'Genres/IndexGenres'
+import Menu from 'Menu'
+import LandingPage from 'Movies/LandingPage'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import routes from 'route-cofing'
 
 function App() {
-  const inTheathers: movieDTO[] = [
-    {
-    id: 1,
-    title: 'O mágico de Oz',
-    poster: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Wizard_of_oz_movie_poster.jpg/243px-Wizard_of_oz_movie_poster.jpg'
-  }
-];
-
   return (
-    <>
-      <h3>In theathers</h3>
-    </>
-  );
+    <BrowserRouter>
+      <Menu />
+      <div className="container">
+        <Switch>
+          {routes.map(route => (
+            <Route key={route.path} path={route.path} exact={route.exact}>
+              <route.component />
+            </Route>
+          ))}
+        </Switch>
+      </div>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
