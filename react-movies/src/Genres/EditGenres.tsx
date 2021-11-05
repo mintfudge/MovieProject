@@ -1,4 +1,5 @@
 import { useParams } from 'react-router'
+import GenreForm from './GenreForm'
 
 export default function EditGenres() {
   const { id }: any = useParams()
@@ -6,7 +7,15 @@ export default function EditGenres() {
   return (
     <>
       <h3>Edit Genres</h3>
-      The id is {id}
+      <GenreForm
+        model={{ name: 'Comedy' }}
+        onSubmit={async value => {
+          // when the form is posted
+          await new Promise(r => setTimeout(r, 3000))
+          console.log(id)
+          console.log(value)
+        }}
+      />
     </>
   )
 }

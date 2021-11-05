@@ -1,8 +1,9 @@
-import IndexGenres from 'Genres/IndexGenres'
 import Menu from 'Menu'
-import LandingPage from 'Movies/LandingPage'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import routes from 'route-cofing'
+import configureValidations from 'Validation'
+
+configureValidations()
 
 function App() {
   return (

@@ -1,8 +1,4 @@
-import { ErrorMessage, Field, Form, Formik } from 'formik'
-import TextField from 'Forms/TextField'
-import { Link } from 'react-router-dom'
-import Button from 'utils/Button'
-import * as Yup from 'yup'
+import GenreForm from './GenreForm'
 
 export default function CreateGenres() {
   //const history = useHistory()
@@ -10,24 +6,14 @@ export default function CreateGenres() {
   return (
     <>
       <h3>Create Genres</h3>
-      <Formik
-        initialValues={{ name: '' }}
-        onSubmit={value => {
+      <GenreForm
+        model={{ name: '' }}
+        onSubmit={async value => {
+          // when the form is posted
+          await new Promise(r => setTimeout(r, 3000))
           console.log(value)
         }}
-        validationSchema={Yup.object({
-          name: Yup.string().required('This field is required')
-        })}
-      >
-        <Form>
-          <TextField field="name" displayName="Name" />
-
-          <Button type="submit">Save changes</Button>
-          <Link className="btn btn-secudary" to="/genres">
-            Cancel
-          </Link>
-        </Form>
-      </Formik>
+      />
     </>
   )
 }
