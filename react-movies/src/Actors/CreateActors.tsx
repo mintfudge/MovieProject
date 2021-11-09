@@ -1,4 +1,4 @@
-import { ActorsForm } from './ActorsForm'
+import ActorsForm from "./ActorsForm";
 
 export default function CreateActors() {
   return (
