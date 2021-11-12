@@ -1,9 +1,9 @@
 import GenericList from 'utils/GenericList'
 import IndividualMovie from './IndividualMovie'
 import { movieDTO } from './movies.model'
-import css from './MoviesList.module.css'
+import css from './MovieList.module.css'
 
-export default function MoviesList(props: moviesListProps) {
+export default function MovieList(props: movieListProps) {
   return (
     <GenericList list={props.movie}>
       <div className={css.div}>
@@ -15,6 +15,6 @@ export default function MoviesList(props: moviesListProps) {
   )
 }
 
-interface moviesListProps {
+interface movieListProps {
   movie?: movieDTO[]
 }

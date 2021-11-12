@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-export default function IndexActors() {
+export default function IndexActor() {
   return (
     <>
       <h3>Actors</h3>

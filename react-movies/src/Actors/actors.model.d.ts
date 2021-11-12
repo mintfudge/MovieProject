@@ -1,5 +1,5 @@
 
-export interface actorsCreationDTO{
+export interface actorCreationDTO{
     name: string;
     dateOfBirth?: Date;
     picture?: File;
@@ -7,7 +7,7 @@ export interface actorsCreationDTO{
     biography?: string;
 }
 
-export interface actorsMovieDTO {
+export interface actorMovieDTO {
     id: number;
     name: string;
     character: string;

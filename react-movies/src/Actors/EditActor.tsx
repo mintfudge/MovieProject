@@ -1,10 +1,10 @@
-import ActorsForm from "./ActorsForm"
+import ActorForm from "./ActorForm"
 
-export default function EditActors() {
+export default function EditActor() {
   return (
     <>
       <h3>Edit</h3>
-      <ActorsForm model={{name: 'Judy Garland', 
+      <ActorForm model={{name: 'Judy Garland', 
       dateOfBirth: new Date('1922-06-10T00:00:00'),
       biography: `Judy was born in 
       **USA**`,

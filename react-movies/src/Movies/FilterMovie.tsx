@@ -1,17 +1,17 @@
 import { Field, Form, Formik } from 'formik'
-import { GenreDTO } from 'Genres/genre.model'
+import { genreDTO } from 'Genres/genres.model'
 import Button from 'utils/Button'
 
-export default function FilterMovies() {
+export default function FilterMovie() {
 
-const initialValues: filterMoviesForm = {
+const initialValues: filterMovieForm = {
     title: '',
     genreId: 0,
     upcomingReleases: false,
     inTheaters: false
 }
 
-const genres: GenreDTO[] = [{ id: 1, name: 'Drama' }, { id: 2, name: 'Comedy' }];
+const genres: genreDTO[] = [{ id: 1, name: 'Drama' }, { id: 2, name: 'Comedy' }];
 
 return (
     <>
@@ -70,7 +70,7 @@ return (
 )
 }
 
-interface filterMoviesForm {
+interface filterMovieForm {
 title: string;
 genreId: number;
 upcomingReleases: boolean;

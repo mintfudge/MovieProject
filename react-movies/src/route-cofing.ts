@@ -1,38 +1,38 @@
-import CreateActors from "Actors/CreateActors";
-import EditActors from "Actors/EditActors";
+import CreateActor from "Actors/CreateActor";
+import EditActor from "Actors/EditActor";
 import IndexActors from "Actors/IndexActors";
 
-import CreateGenres from "Genres/CreateGenres";
-import EditGenres from "Genres/EditGenres";
+import CreateGenre from "Genres/CreateGenre";
+import EditGenre from "Genres/EditGenre";
 import IndexGenres from "Genres/IndexGenres";
 
-import CreateMovieTheaters from "MovieTheaters/CreateMovieTheaters";
+import CreateMovieTheater from "MovieTheaters/CreateMovieTheater";
+import EditMovieTheater from "MovieTheaters/EditMovieTheater";
 import IndexMovieTheaters from "MovieTheaters/IndexMovieTheaters";
-import EditMovieTheaters from "MovieTheaters/EditMovieTheaters";
 
 import CreateMovie from "Movies/CreateMovie";
 import EditMovie from "Movies/EditMovie";
-import FilterMovies from "Movies/FilterMovies";
+import FilterMovie from "Movies/FilterMovie";
 
 import LandingPage from "Movies/LandingPage";
 import RedirectToLandingPage from "utils/RedirectToLandingPage";
 
 const routes = [
   {path: "/genres", component: IndexGenres, exact: true},
-  {path: "/genres/create", component: CreateGenres},
-  {path: "/genres/edit/:id(\\d+)", component: EditGenres},
+  {path: "/genres/create", component: CreateGenre},
+  {path: "/genres/edit/:id(\\d+)", component: EditGenre},
 
   {path: "/actors", component: IndexActors, exact: true},
-  {path: "/actors/create", component: CreateActors},
-  {path: "/actors/edit/:id(\\d+)", component: EditActors},
+  {path: "/actors/create", component: CreateActor},
+  {path: "/actors/edit/:id(\\d+)", component: EditActor},
 
   {path: "/movietheaters", component: IndexMovieTheaters, exact: true},
-  {path: "/movietheaters/create", component: CreateMovieTheaters},
-  {path: "/movietheaters/edit/:id(\\d+)", component: EditMovieTheaters},
+  {path: "/movietheaters/create", component: CreateMovieTheater},
+  {path: "/movietheaters/edit/:id(\\d+)", component: EditMovieTheater},
 
   {path: "/movies/create", component: CreateMovie},
   {path: "/movies/edit/:id(\\d+)", component: EditMovie},
-  {path: "/movies/filter", component: FilterMovies},
+  {path: "/movies/filter", component: FilterMovie},
   
   {path: "/", component: LandingPage, exact: true},
   {path: '*', component: RedirectToLandingPage},

@@ -6,10 +6,10 @@ import TextField from "Forms/TextField";
 import { Link } from "react-router-dom";
 import Button from "utils/Button";
 import * as Yup from 'yup';
-import { actorsCreationDTO } from "./actors.model";
+import { actorCreationDTO } from "./actors.model";
 
 
-export default function ActorsForm(props: actorFormProps) {
+export default function ActorForm(props: actorFormProps) {
     return (
         <Formik
             initialValues={props.model}
@@ -38,6 +38,6 @@ export default function ActorsForm(props: actorFormProps) {
 }
 
 interface actorFormProps {
-    model: actorsCreationDTO;
-    onSubmit(values: actorsCreationDTO, action: FormikHelpers<actorsCreationDTO>): void;
+    model: actorCreationDTO;
+    onSubmit(values: actorCreationDTO, action: FormikHelpers<actorCreationDTO>): void;
 }

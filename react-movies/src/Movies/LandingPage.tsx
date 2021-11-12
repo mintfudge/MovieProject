@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { landingPageDTO } from './movies.model'
-import MoviesList from './MoviesList'
+import MovieList from './MovieList'
 
 export default function LandingPage() {
   const [movies, setMovies] = useState<landingPageDTO>({})
@@ -8,7 +8,7 @@ export default function LandingPage() {
   useEffect(() => {
     const timerId = setTimeout(() => {
       setMovies({
-        inTheatres: [
+        inTheaters: [
           {
             id: 1,
             title: 'O mágico de Oz',
@@ -22,7 +22,7 @@ export default function LandingPage() {
               'https://upload.wikimedia.org/wikipedia/pt/f/ff/Alice-In-Wonderland-Theatrical-Poster.jpg'
           }
         ],
-        upcomingoReleases: [
+        upcomingReleases: [
           {
             id: 3,
             title: 'Sing',
@@ -39,9 +39,9 @@ export default function LandingPage() {
   return (
     <>
       <h3>In theaters</h3>
-      <MoviesList movie={movies.inTheatres} />
+      <MovieList movie={movies.inTheaters} />
       <h3>Upcoming releases</h3>
-      <MoviesList movie={movies.upcomingoReleases} />
+      <MovieList movie={movies.upcomingReleases} />
     </>
   )
 }
