@@ -6,7 +6,6 @@ import 'leaflet/dist/leaflet.css';
 import coordinateDTO from './coordinates.model'
 import { useState } from "react";
 
-
 let defaultIcon = L.icon({
     iconUrl: icon,
     shadowUrl: iconShadow,
