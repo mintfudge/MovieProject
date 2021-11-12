@@ -1,5 +1,5 @@
 import { Field, Form, Formik } from 'formik'
-import { genreDTO } from 'Genres/genres.model'
+import { genreDTO } from 'genres/genres.model'
 import Button from 'utils/Button'
 
 export default function FilterMovie() {

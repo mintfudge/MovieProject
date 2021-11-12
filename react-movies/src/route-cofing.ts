@@ -1,20 +1,20 @@
-import CreateActor from "Actors/CreateActor";
-import EditActor from "Actors/EditActor";
-import IndexActors from "Actors/IndexActors";
+import CreateActor from "actors/CreateActor";
+import EditActor from "actors/EditActor";
+import IndexActors from "actors/IndexActors";
 
-import CreateGenre from "Genres/CreateGenre";
-import EditGenre from "Genres/EditGenre";
-import IndexGenres from "Genres/IndexGenres";
+import CreateGenre from "genres/CreateGenre";
+import EditGenre from "genres/EditGenre";
+import IndexGenres from "genres/IndexGenres";
 
-import CreateMovieTheater from "MovieTheaters/CreateMovieTheater";
-import EditMovieTheater from "MovieTheaters/EditMovieTheater";
-import IndexMovieTheaters from "MovieTheaters/IndexMovieTheaters";
+import CreateMovieTheater from "movietheaters/CreateMovieTheater";
+import EditMovieTheater from "movietheaters/EditMovieTheater";
+import IndexMovieTheaters from "movietheaters/IndexMovieTheaters";
 
-import CreateMovie from "Movies/CreateMovie";
-import EditMovie from "Movies/EditMovie";
-import FilterMovie from "Movies/FilterMovie";
+import CreateMovie from "movies/CreateMovie";
+import EditMovie from "movies/EditMovie";
+import FilterMovie from "movies/FilterMovie";
 
-import LandingPage from "Movies/LandingPage";
+import LandingPage from "movies/LandingPage";
 import RedirectToLandingPage from "utils/RedirectToLandingPage";
 
 const routes = [

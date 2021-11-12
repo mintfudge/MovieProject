@@ -1,5 +1,5 @@
 import { Form, Formik, FormikHelpers } from 'formik'
-import TextField from 'Forms/TextField'
+import TextField from 'forms/TextField'
 import { Link } from 'react-router-dom'
 import Button from 'utils/Button'
 import * as Yup from 'yup'

@@ -1,4 +1,4 @@
-import ActorForm from "./ActorForm"
+import ActorForm from "./ActorForm";
 
 export default function EditActor() {
   return (

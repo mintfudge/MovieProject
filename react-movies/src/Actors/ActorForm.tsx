@@ -1,8 +1,8 @@
 import { Form, Formik, FormikHelpers } from "formik";
-import DateField from "Forms/DateField";
-import ImageField from "Forms/ImageField";
-import MarkdownField from "Forms/MarkdownField";
-import TextField from "Forms/TextField";
+import DateField from "forms/DateField";
+import ImageField from "forms/ImageField";
+import MarkdownField from "forms/MarkdownField";
+import TextField from "forms/TextField";
 import { Link } from "react-router-dom";
 import Button from "utils/Button";
 import * as Yup from 'yup';
