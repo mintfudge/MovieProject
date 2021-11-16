@@ -60,13 +60,13 @@ export default function TypeAheadActors(props: typeAheadActorsProps) {
                 selected={selected}
                 renderMenuItemChildren={actor => (
                     <>
-                        <img alt="actor" src={actor.picture} 
+                        <img alt="actor" src={actor.picture} />
                             style={{
                                 height: '64px',
                                 marginRight: '10px',
                                 width: '64px'
                             }}
-                        />
+                        {/* /> */}
                         <span>{actor.name}</span>
                     </>
                 )}

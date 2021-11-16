@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = MoviesAPI
-build_property.ProjectDir = C:\Users\narag\Documents\ProjetoReact\Mod1\MoviesAPI\MoviesAPI\
+build_property.ProjectDir = /Users/narayanenascimento/Documents/Volvo/MovieProject/MoviesAPI/MoviesAPI/
