@@ -1,8 +1,8 @@
 ﻿<Properties StartupConfiguration="{0EFBD150-3112-43A0-9084-AF1E38A3450F}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="MoviesAPI/Startup.cs">
     <Files>
-      <File FileName="MoviesAPI/Startup.cs" Line="69" Column="27" />
-      <File FileName="MoviesAPI/appsettings.Development.json" Line="8" Column="5" />
+      <File FileName="MoviesAPI/appsettings.Development.json" Line="1" Column="1" />
+      <File FileName="MoviesAPI/Startup.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
