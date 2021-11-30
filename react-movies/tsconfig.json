@@ -1,13 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "baseUrl": "./src",
-    "types": [
-      "node"
-    ],
-    "typeRoots": [
-      "../node_modules/@types"
-    ],
+		"target": "es5",
     "lib": [
       "dom",
       "dom.iterable",
@@ -16,6 +9,7 @@
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
@@ -24,8 +18,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
-    "allowSyntheticDefaultImports": true
+    "jsx": "react-jsx"
   },
   "include": [
     "src"

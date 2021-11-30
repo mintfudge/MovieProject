@@ -18,7 +18,7 @@ export default function Map(props: mapProps) {
     const [coordinates, setCoordinates] = useState<coordinateDTO[]>(props.coordinates);
     return (
         <MapContainer
-            center={[18.482214, -69.914311]} zoom={14}
+            center={[-25.477656128899966, -49.29094507432547]} zoom={14}
             style={{ height: props.height }}
         >
             <TileLayer attribution="React Movies"
@@ -54,3 +54,4 @@ function MapClick(props: mapClickProps) {
 interface mapClickProps {
     setCoordinates(coordinates: coordinateDTO): void;
 }
+

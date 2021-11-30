@@ -1,12 +1,12 @@
 import { Form, Formik, FormikHelpers } from "formik";
-import DateField from "forms/DateField";
-import ImageField from "forms/ImageField";
-import MarkdownField from "forms/MarkdownField";
-import TextField from "forms/TextField";
 import { Link } from "react-router-dom";
-import Button from "utils/Button";
+import TextField from '../forms/TextField';
+import DateField from '../forms/DateField';
+import ImageField from '../forms/ImageField';
+import MarkdownField from '../forms/MarkdownField';
+import Button from '../utils/Button';
+import {actorCreationDTO} from './actors.model'
 import * as Yup from 'yup';
-import { actorCreationDTO } from "./actors.model";
 
 
 export default function ActorForm(props: actorFormProps) {

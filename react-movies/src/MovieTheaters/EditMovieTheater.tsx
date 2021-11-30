@@ -5,9 +5,9 @@ export default function EditMovieTheater(){
         <>
             <h3>Edit Movie Theater</h3>
             <MovieTheaterForm 
-                model={{name: 'Sambil', 
-                latitude: 18.48262101287504, 
-                longitude: -69.911767244339}}
+                model={{name: 'IMAX Palladium', 
+                latitude: -25.477656128899966, 
+                longitude: -49.29094507432547}}
                 onSubmit={values => console.log(values)}
             />
         </>
