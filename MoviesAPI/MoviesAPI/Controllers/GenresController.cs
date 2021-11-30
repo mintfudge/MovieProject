@@ -25,7 +25,8 @@ namespace MoviesAPI.Controllers
             return new List<Genre>() { new Genre() { Id = 1, Name = "Comedy" } };
         }
 
-        [HttpGet("{Id: int}", Name = "getGenre")]
+        //[HttpGet("getGenres/{Id}")]
+        [HttpGet("{Id:int}", Name = "getGenre")]
         public ActionResult<Genre> Get(int Id)
         {
             throw new NotImplementedException();
