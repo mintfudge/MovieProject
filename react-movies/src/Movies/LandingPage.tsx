@@ -1,48 +1,34 @@
-import { useEffect, useState } from "react";
-import { landingPageDTO } from "./movies.model";
-import MoviesList from "./MoviesList";
+import axios, { AxiosResponse } from 'axios';
+import { useEffect, useState } from 'react';
+import { urlMovies } from '../endpoints';
+import AlertContext from '../utils/AlertContext';
+import { landingPageDTO } from './movies.model';
+import MoviesList from './MoviesList';
 
 export default function LandingPage() {
+
   const [movies, setMovies] = useState<landingPageDTO>({});
 
   useEffect(() => {
-    const timerId = setTimeout(() => {
-      setMovies({
-        inTheaters: [
-          {
-            id: 1,
-            title: "O mágico de Oz",
-            poster:
-              "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Wizard_of_oz_movie_poster.jpg/243px-Wizard_of_oz_movie_poster.jpg",
-          },
-          {
-            id: 2,
-            title: "Alice no País das Maravilhas",
-            poster:
-              "https://upload.wikimedia.org/wikipedia/pt/f/ff/Alice-In-Wonderland-Theatrical-Poster.jpg",
-          },
-        ],
-        upcomingReleases: [
-          {
-            id: 3,
-            title: "Sing",
-            poster:
-              "https://upload.wikimedia.org/wikipedia/en/b/bb/Sing_%282016_film%29_poster.jpg",
-          },
-        ],
-      });
-    }, 1000);
+    loadData();
+  }, []);
 
-    return () => clearTimeout(timerId);
-  });
+  function loadData() {
+    axios.get(urlMovies).then((response: AxiosResponse<landingPageDTO>) => {
+      setMovies(response.data);
+    })
+  }
 
   return (
-    <>
+    <AlertContext.Provider value={() => {
+      loadData();
+    }}>
       <h3>In Theaters</h3>
       <MoviesList movies={movies.inTheaters} />
 
       <h3>Upcoming Releases</h3>
       <MoviesList movies={movies.upcomingReleases} />
-    </>
-  );
+    </AlertContext.Provider>
+
+  )
 }

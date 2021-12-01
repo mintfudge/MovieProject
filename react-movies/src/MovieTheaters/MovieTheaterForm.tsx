@@ -33,7 +33,7 @@ export default function MovieTheaterForm(props: movieTheaterForm){
 
                     <div style={{marginBottom: '1rem'}}>
                         <MapField latField="latitude" lngField="longitude" 
-                        coordinates={transformCoordinates()}
+                         coordinates={transformCoordinates()}
                         />
                     </div>
 
