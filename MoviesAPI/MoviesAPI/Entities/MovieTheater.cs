@@ -1,4 +1,4 @@
-﻿using MoviesAPI.Validations;
+﻿using NetTopologySuite.Geometries;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace MoviesAPI.Entities
 {
-    public class Genre
+    public class MovieTheater
     {
         public int Id { get; set; }
-        [Required(ErrorMessage = "The field with name {0} is required")]
-        [StringLength(50)]
-        [FirstLetterUppercase]
+        [Required]
+        [StringLength(maximumLength: 75)]
         public string Name { get; set; }
+        public Point Location { get; set; }
     }
 }
